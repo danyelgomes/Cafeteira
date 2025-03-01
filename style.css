@@ -6,22 +6,41 @@
     padding: 0px;
 }
 
-body {
+body, html {
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
+    background: url(imagens/home.jpg) no-repeat center scroll;
+    background-size: cover;
+    height: 1003px;
 }
 
 header {
     background-color: black;
-    height: 12vh;
+    height: 15vh;
+    position: fixed;
+    display: block;
+    width: 97.4vw;
+    z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+    div.logo img {
+        left: 10%;
+}
+    
+}
+@media screen and (min-width: 601px) {
+    div.logo img {
+        left: 17%;
+}
+    
 }
 
 div.logo img {
     height: 10vh;
     display: none;
     position: absolute;
-    left: 7%;
-    top: 6%;
+    top: 45%;
     transform: translate(-50%, -50%);
     display: block;
 }
@@ -59,14 +78,95 @@ nav ul li a:hover {
     
 }
 
-i {
+.search {
     display: block;
     position: relative;
-    left: 87%;
+    left: 83%;
     font-size: 3.5vh;
+    width: 30px;
 }
 
 a.search:hover {
-    font-size: 5vh;
-    transition: .5s;
+    transform: translate(-5px, -5px);
+    transition: .4s;
+}
+
+.shop {
+    display: block;
+    position: relative;
+    left: 89%;
+    top: -31px;
+    width: 30px;
+    font-size: 4.5vw;
+}
+
+div.shop img {
+    position: fixed;
+}
+
+.shop img:hover {
+    transform: translate(-5px, -5px);
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* Conteúdo */
+
+article {
+    color: white;
+    position: relative;
+    top: 30vh;
+    left: 10vw;
+    width: 50vw;
+}
+
+article h1 {
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+}
+article p {
+    width: 300px;
+    color: rgba(255, 255, 255, 0.526);
+}
+
+.pegue {
+    margin-top: 15px;
+    background-color: rgb(92, 44, 0);
+    color: white;
+    width: 136px;
+    padding: 10px;
+}
+
+aside {
+    background-color: black;
+    position: relative;
+    margin-top: 710px;
+}
+
+aside h1 span {
+    color: rgb(255, 189, 127);
+}
+
+aside h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+aside .about img{
+    width: 50vw;
+    display: block;
+    position: relative;
+    left: 5vw;
+}
+
+.coffee {
+    background-color: rgb(41, 41, 41);
+    width: 50vw;
+    display: block;
+    position: ;
+    top: -300px;
+    left: 350px;
 }
