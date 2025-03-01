@@ -19,7 +19,7 @@ header {
     height: 15vh;
     position: fixed;
     display: block;
-    width: 97.4vw;
+    width: 100%;
     z-index: 1;
 }
 
@@ -152,7 +152,13 @@ aside h1 span {
 aside h1 {
     color: white;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: -10px;
+    padding-top: 40px;
+}
+
+aside p {
+    padding: 25px;
+    color: rgba(255, 255, 255, 0.554);
 }
 
 aside .about img{
@@ -163,10 +169,9 @@ aside .about img{
 }
 
 .coffee {
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(45, 45, 45);
     width: 50vw;
     display: block;
-    position: ;
     top: -300px;
     left: 350px;
 }
