@@ -7,11 +7,16 @@
 }
 
 body, html {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     background: url(imagens/home.jpg) no-repeat center scroll;
     background-size: cover;
     height: 1003px;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -112,6 +117,7 @@ div.shop img {
 
 /* Conteúdo */
 
+
 article {
     color: white;
     position: relative;
@@ -139,11 +145,24 @@ article p {
     padding: 10px;
 }
 
+@media screen and (max-width: 1017px) {
+    aside {
+        height: 6500px;
+    }
+    
+}
+@media screen and (min-width: 1018px) {
+    aside {
+        height: 4000px;
+    }
+    
+}
+
 aside {
     background-color: rgb(0, 0, 0);
     position: relative;
     margin-top: 710px;
-    height: 2000px;
+    width: 100%;
 }
 
 aside h1 span {
@@ -157,6 +176,7 @@ aside h1 {
     margin-bottom: -10px;
     padding-top: 20px;
     margin-bottom: 50px;
+    
 }
 
 .title {
@@ -170,22 +190,70 @@ aside p {
     margin-bottom: -30px;
 }
 
-div.about img{
-    width: 550px;
-    
-}
+
 
 .row {
     display: flex;
     justify-content: center;
-    margin-right: 300px;
-    margin-left: 300px;
     margin-top: 30px;
+    width: 100%;
 }
+
+@media screen and (max-width: 1017px) {
+    .about img{
+        position: relative;
+        height: 392px;
+        max-width: 549px;
+        width: 70vw;
+    }
+    .coffee {
+        position: absolute;
+        display: block;
+        top: 500px;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        margin-bottom: 500px;
+        max-width: 549px;
+        width: 70vw;
+    }
+    h1#coffee {
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section.menu h1 {
+        margin-top: 500px;
+    }
+}
+
+@media screen and (min-width: 1018px) {
+    .coffee {
+        width: 542px;
+    }
+
+
+    .about img{
+        position: relative;
+        height: 392px;
+        width: 542px;
+    }
+    
+}
+
 
 .coffee {
    background-color: rgb(31, 31, 39);
-   width: 400px;
+}
+
+.coffee h1 {
+    color: aqua;
+}
+
+.coffee p {
+    margin-top: -50px;
+    padding-bottom: 55px;
 }
 
 .saiba {
@@ -208,44 +276,75 @@ div.about img{
 
 section.menu h1 {
     font-size: 2em;
-    margin-top: 50px;
+
+}
+
+@media screen and (max-width: 1017px) {
+    div.menu-1 {
+        width: 296px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (min-width: 1018px) {
+    div.menu-1 {
+        width: 888px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width: 1017px) {
+    div.menu-2 {
+        width: 296px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+    
+}
+@media screen and (min-width: 1018px) {
+    div.menu-2 {
+        width: 888px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
 }
 
 div.menu-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 738px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.384);
-    margin-top: 70px;
-    cursor: pointer;
-    
+    margin-top: 70px;    
 }
 
 
 div.menu-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: auto;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.384);
-    cursor: pointer;
 }
 
 div.menu-1 div {
     height: 300px;
-    margin-bottom: 30px;
-    margin-right: 10px;
+    margin: 30px;
+    padding-right: 0px;
     box-shadow: 0px 0px 2px 0.5px #80808082;
+    cursor: pointer;
 }
 div.menu-2 div {
+    margin: 30px;
     height: 300px;
-    margin-right: 10px;
    box-shadow: 0px 0px 2px 0.5px #80808082;
+   cursor: pointer;
 }
 
 
@@ -322,39 +421,139 @@ div.menu-1 div button:hover, div.menu-2 div button:hover {
     transition: 0.5s;
 }
 
+/* Clientes */
+
+@media screen and (max-width: 1017px) {
+    section.clientes div.flex {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        width: 296px;
+    }
+    
+}
+@media screen and (min-width: 1017px) {
+    section.clientes div.flex {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 1017px) {
+    section.clientes div.flex div {
+        width: 300px;
+        display: flex;
+        box-shadow: 0px 0px 2px 0.5px #80808082;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-bottom: 3vw;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1018px) {
+    section.clientes div.flex div {
+        width: 300px;
+        display: flex;
+        box-shadow: 0px 0px 2px 0.5px #80808082;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 1vw;
+    }
+    
+}
+@media screen and (min-width: 1018px) {
+    section.clientes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 300px;
+        align-content: center;
+        align-items: center;
+    }
+    
+}
+
+
 section.clientes img{
     width: 86px;
     height: 86px;
     border-radius: 50%;
-    margin-left: 30%;
-    margin-top: 50px;
-}
-section.clientes div.flex div {
-    width: 300px;
-    box-shadow: 0px 0px 2px 0.5px #80808082;
-    display: inline-block;
-    margin: 0 auto;
-    margin-right:30px;
-    width: 250px;
-    padding: 20px;
+    margin-top: 24px;
+    position: relative;
+    
 }
 
-section.clientes div.flex {
-    display: block;
-    margin: 20px auto 0px auto;
-    margin-top: 50px;
-    width: 1000px;
-}
 
 div.flex p {
     text-align: center;
+    margin-top: -30px;
+}
+
+div.flex h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
 }
 
 section.clientes h2 {
     text-align: center;
     color: white;
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 section.clientes h2 span {
     color: #cdab7d;
+}
+
+div#aspas img{
+    border-radius: 0%;
+    width: 30px;
+    height: 30px;
+
+}
+
+div#aspas {
+    position: relative;
+    top: -20px;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px;
+    width: 50px;
+}
+
+#stars img{
+    width: 20px;
+    height: 20px;
+}
+
+#stars {
+    box-shadow: none;
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    width: 118px;
+}
+
+section.localizacao div.local {
+    margin: 0 auto;
+    width: 600px;
+    height: 550px;
+    position: relative;
+    left: 0px;
+}
+
+section.localizacao {
+    width: 98vw;
 }
