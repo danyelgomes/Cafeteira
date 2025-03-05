@@ -4,6 +4,7 @@
 * {
     margin: 0px;
     padding: 0px;
+
 }
 
 body, html {
@@ -11,12 +12,8 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
     background: url(imagens/home.jpg) no-repeat center scroll;
     background-size: cover;
-    height: 1003px;
+    height: 1110px;
     width: 100%;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 header {
@@ -124,16 +121,37 @@ article {
     top: 30vh;
     left: 10vw;
     width: 50vw;
+    height: 1103px;
+}
+
+@media screen and (max-width: 334px) {
+    article h1 {
+        width: 100px;
+    }
+    
+    article p {
+        width: 100px;
+    }
+
+}
+@media screen and (min-width: 335px) {
+    article h1 {
+        width: 30vw;
+    }
+    
+    article p {
+        width: 50vw;
+    }
+
 }
 
 article h1 {
-    width: 300px;
     margin-bottom: 20px;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
 }
+
 article p {
-    width: 300px;
     color: rgba(255, 255, 255, 0.526);
 }
 
@@ -153,15 +171,16 @@ article p {
 }
 @media screen and (min-width: 1018px) {
     aside {
-        height: 4000px;
+        height: 3500px;
     }
     
 }
 
+
+
 aside {
     background-color: rgb(0, 0, 0);
     position: relative;
-    margin-top: 710px;
     width: 100%;
 }
 
@@ -215,22 +234,26 @@ aside p {
         margin-bottom: 500px;
         max-width: 549px;
         width: 70vw;
+
     }
     h1#coffee {
-        width: 300px;
+        width: 56vw;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
     section.menu h1 {
-        margin-top: 500px;
+        font-size: 2em;
+        margin-top: 600px;
     }
 }
 
 @media screen and (min-width: 1018px) {
     .coffee {
         width: 542px;
+        margin-top: -0.52px;
+        max-height: 394px;
     }
 
 
@@ -248,7 +271,8 @@ aside p {
 }
 
 .coffee h1 {
-    color: aqua;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 60%);
 }
 
 .coffee p {
@@ -256,10 +280,21 @@ aside p {
     padding-bottom: 55px;
 }
 
+@media screen and (max-width: 658px) {
+    .saiba {
+        margin: 10px 0px 0px 20px;
+    }
+}
+@media screen and (min-width: 658px) {
+    .saiba {
+        margin: 30px 0px 0px 20px;
+    }
+}
+
 .saiba {
     position: relative;
     display: flex;
-    margin: 30px 0px 0px 20px;
+    
     padding: 7px;
     padding-left: 20px;
     padding-right: 20px;
@@ -276,7 +311,6 @@ aside p {
 
 section.menu h1 {
     font-size: 2em;
-
 }
 
 @media screen and (max-width: 1017px) {
@@ -394,6 +428,7 @@ span.price {
     color: white;
     top: -100px;
     left: 45px;
+    width: 60%;
 }
 span.sale {
     text-decoration: line-through;
@@ -424,6 +459,15 @@ div.menu-1 div button:hover, div.menu-2 div button:hover {
 /* Clientes */
 
 @media screen and (max-width: 1017px) {
+    section.clientes div.flex {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        width: 296px;
+    }
+    
+}
+@media screen and (max-width: 319px) {
     section.clientes div.flex {
         display: grid;
         margin-left: auto;
@@ -474,6 +518,19 @@ div.menu-1 div button:hover, div.menu-2 div button:hover {
 @media screen and (min-width: 1018px) {
     section.clientes {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 300px;
+        align-content: center;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width: 345px) {
+    section.clientes {
+        width: 80%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -546,14 +603,35 @@ div#aspas {
     width: 118px;
 }
 
+/* Localização */
+
 section.localizacao div.local {
     margin: 0 auto;
-    width: 600px;
+    width: 75vw;
     height: 550px;
     position: relative;
     left: 0px;
 }
 
 section.localizacao {
-    width: 98vw;
+    width: 100%;
+}
+section.localizacao iframe{
+    width: 77vw;
+    height: 600px;
+    
+}
+
+div.local {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.localizacao h1.title {
+    margin-top: 300px;
+    width: 302px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
