@@ -4,6 +4,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body, html {
@@ -16,77 +17,192 @@ body, html {
 }
 
 header {
-    background-color: black;
-    height: 15vh;
+    background-color: #000000;
     position: fixed;
-    display: block;
+    display: flex;
     width: 100%;
-    z-index: 1001;
+    z-index: 1;
+}
+header div.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media screen and (max-width: 600px) {
-    div.logo img {
-        left: 10%;
+div.logo {
+    height: 100px;
+    left: 10%;
+    position: relative;
 }
-    
-}
-@media screen and (min-width: 601px) {
-    div.logo img {
-        left: 17%;
-}
-    
-}
-
 div.logo img {
-    height: 10vh;
-    display: none;
-    position: absolute;
-    top: 45%;
-    transform: translate(-50%, -50%);
+    height: 100px;
+    position: relative;
     display: block;
 }
 
 nav ul li {
     color: white;
-    display: inline-block;
-    padding: 7px;
 }
 
 nav ul {
     text-align: center;
     list-style-type: none;
-    
-    
+    display: flex;
+    justify-content: center;
+
+}
+#icon {
+    transition: .3s;
+}
+
+@media screen and (max-width: 750px){
+    header div.content {
+        width: 100%;
+        align-items: flex-start;
+    }
+    header nav {
+        display: none;
+        transition: .5s;
+        margin-top: 100px;
+        margin-bottom: 5px;
+    }
+    header nav ul {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    header nav li {
+        margin: 5px;
+        text-transform: uppercase;
+        transition: .5s;
+        border-radius: 10px;
+        border: 2px solid rgba(138, 43, 226, 0.41);
+        width: 150px;
+    }
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        padding: 15px;
+        transition: .5s;
+    }
+    header nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.62);
+        color: black;
+        text-decoration: none;
+        transition: .5s;
+    }
+    #icon {
+        color: white;
+        position: fixed;
+        font-size: 3em;
+        width: 50px;
+        cursor: pointer;
+        margin-top: 3%;
+        left: 50%;
+    }
+    #icon:hover {
+        background-color: rgba(100, 100, 100, 0.56);
+        transition: .3s;
+        border-radius: 50%;
+    }
+    .buy {
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        position: static;
+        margin-top: 4%;
+    }
+}
+@media screen and (min-width: 751px) {
+    header div.content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header nav {
+        display: block;
+        transition: .5s;
+        margin-bottom: 5px;
+        margin-left: 9%;
+    }
+    header nav ul {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    header nav li {
+        margin: 5px;
+        text-transform: uppercase;
+        transition: .5s;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 189, 127, 0.8);
+        width: 130px;
+    }
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        padding: 5px;
+        transition: .3s;
+    }
+    header nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.62);
+        color: black;
+        text-decoration: none;
+        transition: .3s;
+    }
+    #icon {
+        display: none;
+    }
+    #icon:hover {
+        background-color: rgba(100, 100, 100, 0.56);
+        transition: .3s;
+        border-radius: 50%;
+    }
+    .buy {
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        position: static;
+        margin-right: 5%;
+    }
+}
+.aberto {
+    display: block;
 }
 
 nav {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     position: relative;
+    display: flex; !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
 }
 
 nav ul li a{
     color: white;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 nav ul li a:hover {
-    color: rgb(132, 132, 132);
-    transition: 0.3s;
-    text-decoration: underline;
+    transition: .3s;
     
 }
 
 .search {
-    display: block;
-    position: relative;
-    left: 83%;
     font-size: 3.5vh;
     width: 30px;
     transition: .4s;
+    position: relative;
+    margin-top: 6px;
+    margin-right: 2px;
 }
 
 a.search:hover {
@@ -96,11 +212,11 @@ a.search:hover {
 
 .shop {
     display: block;
+    width: 40px;
+    height: 40px;
+    transition: .4s;
     position: relative;
-    left: 89%;
-    top: -31px;
-    width: 30px;
-    font-size: 4.5vw;
+    top: 5px;
 }
 
 div.shop img {
@@ -151,9 +267,11 @@ article h1 {
     margin-bottom: 20px;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
+    max-width: 400px;
 }
 
 article p {
+    max-width: 400px;
     color: rgba(255, 255, 255, 0.526);
 }
 
@@ -207,11 +325,9 @@ aside h1 {
 
 aside p {
     padding: 25px;
-    color: rgba(255, 255, 255, 0.554);
+    color: rgb(255 255 255 / 66%);;
     margin-bottom: -30px;
 }
-
-
 
 .row {
     display: flex;
